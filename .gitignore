@@ -1,0 +1,19 @@
+# Environments
+venv/
+.env
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Heavy Data & Model Artifacts
+data/
+models/
+*.pth
+*.h5
+*.tflite
+*.onnx
+
+# IDE/OS files
+.DS_Store
+.vscode/
