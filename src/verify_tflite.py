@@ -17,7 +17,7 @@ def verify_mobile_model(image_path="data/processed/Abyssinian/Abyssinian_1.jpg",
         return
 
     # 2. Load the label map
-    with open(labels_path, "f") as f:
+    with open(labels_path, "r") as f:
         labels = [line.strip() for line in f.readlines()]
     print(f"📖 Loaded {len(labels)} class labels.")
 
