@@ -1,14 +1,39 @@
-PROPRIETARY AND CONFIDENTIAL
+PROPRIETARY AND CONFIDENTIAL SOFTWARE LICENSE AGREEMENT
 ALL RIGHTS RESERVED
 
 Copyright (c) 2026 Umanda Thathsarani
 
-The code, architecture, datasets, documentation, and trained models within this repository are the exclusive intellectual property of Umanda Thathsarani.
+1. DEFINITIONS
+"Software" refers to all source code, scripts, configuration files, trained machine learning models, weights, datasets, documentation, and digital assets contained within this repository.
+"Author" refers to the copyright holder, Umanda Thathsarani.
+"Repository" refers to the GitHub repository and any other digital location where this Software is hosted or stored.
 
-1. NO OPEN SOURCE GRANTS: This repository is NOT open-source. No license is granted to any entity or individual to use, modify, distribute, or reproduce this software or its associated files in any capacity.
+2. GRANT OF LICENSE (NO OPEN SOURCE)
+This Software is strictly PROPRIETARY AND CONFIDENTIAL. It is NOT open-source software. The public visibility of this Repository on GitHub (or any other platform) is for portfolio and demonstration purposes only. Visibility does not constitute a license to use, nor does it waive the Author's exclusive intellectual property rights. 
 
-2. PROHIBITION OF COPYING AND FORKING: You are strictly prohibited from copying, cloning, downloading, forking, or reverse-engineering any part of this repository for personal, commercial, or academic use.
+3. RESTRICTIONS
+No entity, individual, or organization is granted any right or license to the Software. You are expressly and strictly PROHIBITED from:
+  a. Copying, duplicating, or downloading the Software in whole or in part.
+  b. Forking, cloning, or mirroring this Repository.
+  c. Modifying, translating, adapting, or creating derivative works based on the Software.
+  d. Distributing, sublicensing, selling, renting, or leasing the Software.
+  e. Reverse-engineering, decompiling, or disassembling any compiled code, machine learning models (.keras, .tflite), or algorithmic logic.
+  f. Using the Software for any commercial, personal, or academic purpose without explicit written consent.
 
-3. ACADEMIC INTEGRITY: This codebase is submitted as original academic work. Any unauthorized use, reproduction, or adaptation of this code by other students, researchers, or institutions constitutes a direct violation of academic integrity policies (including those of the Sri Lanka Institute of Information Technology - SLIIT) and will be reported for disciplinary and legal action.
+4. ACADEMIC INTEGRITY AND PLAGIARISM
+This codebase represents the original, independent academic work of the Author. 
+  a. Any unauthorized use, reproduction, or adaptation of this codebase (or its architectural methodology) by other students, researchers, or academic staff is strictly forbidden.
+  b. Utilizing this Software as part of an assignment, project, or thesis at the Sri Lanka Institute of Information Technology (SLIIT) or any other educational institution constitutes academic misconduct and plagiarism.
+  c. The Author reserves the right to report any such violations to the relevant academic disciplinary boards and pursue legal action if intellectual property is stolen.
 
-If you wish to request permission for specific usage, you must obtain explicit, prior written consent from the copyright holder.
+5. OWNERSHIP
+All rights, title, and interest in and to the Software, including all associated intellectual property rights (patents, copyrights, trade secrets, and trademarks), are and shall remain the sole and exclusive property of the Author.
+
+6. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. LIMITATION OF LIABILITY
+Under no circumstances shall the Author be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, arising in any way out of the use of this Software.
+
+8. PERMISSIONS
+Any use of the Software outside the bounds of this Agreement requires express, prior written permission from the Author. To request permission, contact the Author directly.
