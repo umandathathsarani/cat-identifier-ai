@@ -2,7 +2,7 @@ import os
 import numpy as np
 import tensorflow as tf
 
-def verify_mobile_model(image_path="data/processed/Abyssinian/Abyssinian_1.jpg", 
+def verify_mobile_model(image_path="data/processed/Abyssinian/12136161_252.jpg", 
                         model_path="models/model.tflite", 
                         labels_path="models/labels.txt"):
     """
