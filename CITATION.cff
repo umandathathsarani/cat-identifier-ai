@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you reference this architecture, methodology, or codebase in academic work, please cite it as below."
+authors:
+  - family-names: "Thathsarani"
+    given-names: "Umanda"
+title: "Cat Breed Identifier AI - Edge MLOps Pipeline"
+version: 1.0.0
+date-released: 2026-06-20
+url: "https://github.com/umandathathsarani/cat-identifier-ai"
+repository-code: "https://github.com/umandathathsarani/cat-identifier-ai"
+keywords:
+  - machine-learning
+  - edge-ai
+  - react-native
+  - tensorflow-lite
+  - computer-vision
