@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+
 import { Camera, useCameraDevice, useFrameProcessor, useCameraPermission, Frame } from 'react-native-vision-camera';
 import { useTensorflowModel } from 'react-native-fast-tflite';
 import { useResizePlugin } from 'vision-camera-resize-plugin';
@@ -7,7 +8,8 @@ import { useResizePlugin } from 'vision-camera-resize-plugin';
 export default function CatScanner() {
   const device = useCameraDevice('back');
   const { hasPermission, requestPermission } = useCameraPermission();
-  const model = useTensorflowModel(require('../../assets/models/model.tflite'), 'default');
+
+  const model = useTensorflowModel(require('../../assets/models/model.tflite'), 'default' as any);
   
   const { resize } = useResizePlugin();
 
@@ -28,7 +30,6 @@ export default function CatScanner() {
     });
 
     const outputs = model.model.runSync([resized as any]);
-    
     console.log(outputs); 
   }, [model.state]);
 
@@ -36,14 +37,18 @@ export default function CatScanner() {
   if (device == null) return <Text style={styles.centerText}>No Camera Found</Text>;
   if (model.state === 'loading') return <ActivityIndicator style={styles.centerText} size="large" color="#00ff00" />;
 
+  const cameraProps: any = {
+    frameProcessor: frameProcessor
+  };
+
   return (
     <View style={StyleSheet.absoluteFill}>
       <Camera
         style={StyleSheet.absoluteFill}
         device={device}
         isActive={true}
-        frameProcessor={frameProcessor}
         pixelFormat="rgb"
+        {...cameraProps} 
       />
       
       <View style={styles.overlay}>
