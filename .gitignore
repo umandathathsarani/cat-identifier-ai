@@ -17,3 +17,15 @@ models/
 # IDE/OS files
 .DS_Store
 .vscode/
+
+# Huge ML Checkpoints (GitHub blocks files over 100MB)
+*.keras
+
+# React Native / Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 🚨 EXCEPTION: Track the compressed mobile models! 🚨
+!mobile_app/assets/models/
+!mobile_app/assets/models/*
