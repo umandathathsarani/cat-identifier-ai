@@ -1,89 +1,138 @@
 # 🐾 Cat Breed Identifier AI
 
-### Enterprise-Grade Machine Learning Pipeline for Mobile Edge Deployment
+### Enterprise-Grade Machine Learning Pipeline & Cross-Platform Mobile Application
 
-> A production-ready Machine Learning Operations (MLOps) pipeline that trains, optimizes, and deploys a deep learning model capable of identifying 42 cat breeds directly on Android and iOS devices without requiring cloud connectivity.
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![React Native](https://img.shields.io/badge/React_Native-Latest-blue)
+![Expo](https://img.shields.io/badge/Expo-SDK_56-black)
+![TensorFlow Lite](https://img.shields.io/badge/TensorFlow_Lite-Mobile-green)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-success)
+
+> A production-ready Machine Learning Operations (MLOps) pipeline and mobile AI application that trains, optimizes, and deploys a deep learning model capable of identifying 42 cat breeds directly on Android and iOS devices without requiring cloud connectivity.
 
 ---
 
-## 📌 Project Overview
+## 📖 Table of Contents
 
-Cat Breed Identifier AI is a complete end-to-end machine learning system designed to solve the fine-grained image classification challenge of distinguishing visually similar cat breeds.
+* [Project Overview](#-project-overview)
+* [Features](#-features)
+* [System Architecture](#-system-architecture)
+* [Technical Specifications](#-technical-specifications)
+* [Training Strategy](#-training-strategy)
+* [Model Optimization](#-model--pipeline-optimization)
+* [Project Structure](#-project-structure)
+* [Installation](#-installation)
+* [Execution Roadmap](#-execution-roadmap)
+* [Technology Stack](#-technology-stack)
+* [Results](#-results)
+* [Future Improvements](#-future-improvements)
+* [Intellectual Property Notice](#-intellectual-property-notice)
 
-Unlike traditional AI applications that rely on remote API calls, this solution performs all inference locally on the user's device using a compressed TensorFlow Lite model, ensuring:
+---
+
+# 📌 Project Overview
+
+Cat Breed Identifier AI is an end-to-end machine learning ecosystem designed to solve the fine-grained image classification problem of distinguishing visually similar cat breeds.
+
+The project combines:
+
+* A complete TensorFlow-based MLOps training pipeline
+* Transfer learning with EfficientNetB0
+* TensorFlow Lite model optimization
+* A React Native mobile application
+* Real-time camera inference using Vision Camera and JSI-based processing
+
+Unlike cloud-dependent AI systems, all inference is performed locally on the device, providing:
 
 * ⚡ Near-zero latency predictions
-* 🔒 Complete privacy
+* 🔒 Complete user privacy
 * 📶 Offline functionality
 * 📱 Mobile-first deployment
-
-The project follows industry-standard MLOps practices including data validation, preprocessing, transfer learning, hyperparameter tuning, model evaluation, quantization, and edge deployment.
 
 ---
 
 # 🚀 Features
 
-### 🧠 Deep Learning Classification
+## 🧠 Deep Learning Classification
 
-* Identifies **42 distinct cat breeds**
-* Trained on **30,624 images**
-* Uses transfer learning for improved accuracy
-* Optimized for mobile deployment
-
-### ⚙️ Production Data Pipeline
-
-* TensorFlow `tf.data` pipeline
-* Automatic caching and prefetching
-* Dynamic class weighting for dataset imbalance handling
-* Efficient batch processing
-
-### 📈 Model Optimization
-
+* Identifies 42 cat breeds
+* Trained on 30,624 images
 * Two-phase transfer learning strategy
-* Early stopping
-* Model checkpointing
-* Fine-tuning of upper EfficientNet layers
-* Quantization for reduced model size
+* Optimized for edge deployment
 
-### 📱 Mobile Edge Deployment
+## 📱 Mobile AI Scanner
+
+* React Native + Expo architecture
+* Vision Camera v4 integration
+* Fast TensorFlow Lite inference
+* Real-time breed predictions
+* Native Android and iOS support
+
+## ⚙️ Production Data Pipeline
+
+* TensorFlow tf.data API
+* Dynamic class weighting
+* Automatic caching
+* Automatic prefetching
+* GPU-optimized data loading
+
+## 🔋 Edge AI Optimization
 
 * TensorFlow Lite conversion
 * Integer quantization
-* Android and iOS compatible
-* Offline inference support
+* Reduced memory consumption
+* Faster mobile inference
+* Lower battery usage
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-Raw Images
-     │
-     ▼
-Data Cleaning
-     │
-     ▼
-Data Preprocessing
-     │
-     ▼
-tf.data Pipeline
-(Cache + Prefetch)
-     │
-     ▼
-EfficientNetB0
-Transfer Learning
-     │
-     ▼
-Fine-Tuning
-     │
-     ▼
-Model Evaluation
-     │
-     ▼
-TensorFlow Lite Conversion
-     │
-     ▼
-Mobile Deployment
+                     ┌─────────────────────┐
+                     │     Raw Images      │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │   Data Cleaning     │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │   Preprocessing     │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │  tf.data Pipeline   │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │   EfficientNetB0    │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │    Fine-Tuning      │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ TensorFlow Lite     │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ React Native App    │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                     ┌─────────────────────┐
+                     │ Live Camera Scanner │
+                     └─────────────────────┘
 ```
 
 ---
@@ -98,10 +147,11 @@ Mobile Deployment
 | Dataset Size      | 30,624 Images             |
 | Training Images   | 24,500                    |
 | Validation Images | 6,124                     |
-| Input Size        | 224 × 224 RGB             |
-| Framework         | TensorFlow / Keras        |
+| Input Resolution  | 224 × 224 RGB             |
+| ML Framework      | TensorFlow / Keras        |
+| Mobile Framework  | React Native + Expo       |
 | Deployment Format | TensorFlow Lite (.tflite) |
-| Platform          | Android & iOS             |
+| Target Platforms  | Android & iOS             |
 
 ---
 
@@ -117,28 +167,26 @@ The EfficientNetB0 backbone remains frozen while a custom classification head is
 * Dense classification head
 * Dropout: 0.4
 * Epochs: 15
-* Transfer learning initialization
 
 ### Goal
 
-Preserve ImageNet-learned visual features while adapting the model to cat breed classification.
+Retain ImageNet knowledge while adapting the model for cat breed recognition.
 
 ---
 
 ## Phase 2 – Deep Fine-Tuning
 
-The upper layers of EfficientNetB0 are unfrozen and retrained with a significantly reduced learning rate.
+The upper 50 layers are unfrozen and trained using a lower learning rate.
 
 ### Configuration
 
 * Top 50 layers unfrozen
 * Learning rate: 1e-5
 * Epochs: 40
-* Fine-grained breed optimization
 
 ### Goal
 
-Allow the model to learn subtle feline characteristics such as:
+Learn subtle feline features including:
 
 * Ear shape
 * Fur texture
@@ -148,9 +196,9 @@ Allow the model to learn subtle feline characteristics such as:
 
 ---
 
-# ⚡ Data Pipeline Optimization
+# ⚡ Model & Pipeline Optimization
 
-The project uses TensorFlow's optimized input pipeline:
+## TensorFlow Data Pipeline
 
 ```python
 dataset.cache()
@@ -159,59 +207,30 @@ dataset.prefetch(tf.data.AUTOTUNE)
 
 Benefits:
 
-* Faster training throughput
+* Faster training
 * Reduced CPU bottlenecks
-* Better GPU utilization
-* Lower disk I/O overhead
+* Improved GPU utilization
 
----
+## Dataset Imbalance Handling
 
-# ⚖️ Dataset Imbalance Handling
-
-To address uneven breed distributions, dynamic class weighting is applied.
-
-### Strategy
-
-* Majority classes capped at 1,000 images
-* Minority classes guaranteed a minimum of 150 images
-* Weighted loss calculation during training
-
-Benefits:
-
+* Dynamic class weighting
+* Minority breed protection
 * Reduced prediction bias
-* Better minority breed recognition
-* Improved overall model fairness
-
----
-
-# 🤖 Training Callbacks
 
 ## Early Stopping
 
 ```python
-monitor="val_accuracy"
-patience=6
+EarlyStopping(
+    monitor="val_accuracy",
+    patience=6
+)
 ```
-
-Automatically stops training when validation performance stops improving.
-
----
 
 ## Model Checkpointing
 
-Continuously saves the best-performing model during training.
+Automatically saves the best-performing model throughout training.
 
-Benefits:
-
-* Prevents loss of optimal weights
-* Enables recovery from interruptions
-* Preserves best validation accuracy
-
----
-
-# 📱 TensorFlow Lite Optimization
-
-The trained Keras model is compressed using TensorFlow Lite quantization.
+## TensorFlow Lite Quantization
 
 ```python
 converter.optimizations = [
@@ -223,8 +242,7 @@ Benefits:
 
 * Smaller model size
 * Faster inference
-* Lower memory consumption
-* Better battery efficiency
+* Lower battery usage
 
 ---
 
@@ -255,86 +273,113 @@ Cat-Breed-Identifier-AI/
 │   ├── convert_tflite.py
 │   └── verify_tflite.py
 │
-├── README.md
-└── requirements.txt
+├── mobile_app/
+│   ├── assets/
+│   ├── src/
+│   ├── app.json
+│   ├── eas.json
+│   └── package.json
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/cat-identifier-ai.git
+cd cat-identifier-ai
+```
+
+## Python Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Mobile Application
+
+```bash
+cd mobile_app
+npm install
 ```
 
 ---
 
 # 🚀 Execution Roadmap
 
-## Phase 1 — Dataset Preparation
+## Dataset Preparation
 
 ```bash
 python src/clean_data.py
 python src/preprocess.py
 ```
 
-### Purpose
-
-* Remove corrupted images
-* Validate dataset integrity
-* Create optimized TensorFlow datasets
-
----
-
-## Phase 2 — Model Training
+## Model Training
 
 ```bash
 python src/train.py
 ```
 
-### Purpose
-
-* Feature extraction training
-* Deep fine-tuning
-* Weight optimization
-
----
-
-## Phase 3 — Evaluation
+## Evaluation
 
 ```bash
 python src/plot_history.py
 python src/predict.py
 ```
 
-### Purpose
-
-* Visualize learning curves
-* Verify model predictions
-
----
-
-## Phase 4 — Mobile Deployment
+## TensorFlow Lite Conversion
 
 ```bash
 python src/convert_tflite.py
 python src/verify_tflite.py
 ```
 
-### Purpose
+## Mobile Build
 
-* Generate TensorFlow Lite model
-* Validate edge-device inference
+```bash
+cd mobile_app
+eas build --profile preview --platform android
+```
 
 ---
 
-# 📈 Outputs
+# 📈 Results
 
-Generated artifacts include:
+| Metric              | Value |
+| ------------------- | ----- |
+| Validation Accuracy | TBD   |
+| Precision           | TBD   |
+| Recall              | TBD   |
+| F1 Score            | TBD   |
+| Model Size (Keras)  | TBD   |
+| Model Size (TFLite) | TBD   |
 
-| Artifact                   | Description            |
-| -------------------------- | ---------------------- |
-| `.keras` Model             | Full desktop model     |
-| `.tflite` Model            | Mobile-ready model     |
-| `labels.txt`               | Class labels           |
-| `training_history.json`    | Training metrics       |
-| `training_performance.png` | Accuracy & loss curves |
+> Update this section once final training is completed.
+
+---
+
+# 🔮 Future Improvements
+
+* Support additional cat breeds
+* Multi-pet classification
+* Breed confidence visualization
+* On-device model updates
+* iOS App Store deployment
+* Android Play Store deployment
+* Automated CI/CD pipelines
 
 ---
 
 # 🛠️ Technology Stack
+
+### Machine Learning
 
 * Python
 * TensorFlow
@@ -342,14 +387,28 @@ Generated artifacts include:
 * TensorFlow Lite
 * NumPy
 * Matplotlib
-* JSON
-* tf.data API
+
+### Mobile Development
+
+* React Native
+* Expo
+* TypeScript
+* Vision Camera
+* Fast-TFLite
+* Reanimated Worklets
+
+### DevOps & Tooling
+
+* Git
+* GitHub
+* EAS Build
+* VS Code
 
 ---
 
 # 🔒 Intellectual Property Notice
 
-**PROPRIETARY AND CONFIDENTIAL**
+## PROPRIETARY AND CONFIDENTIAL
 
 Copyright © 2026 Umanda Thathsarani. All Rights Reserved.
 
@@ -380,4 +439,4 @@ Specialization: Artificial Intelligence
 
 ---
 
-### ⭐ If you found this project interesting, please consider starring the repository.
+### ⭐ If you found this project interesting, consider starring the repository.
