@@ -1,16 +1,24 @@
 cff-version: 1.2.0
-message: "If you reference this architecture, methodology, or codebase in academic work, please cite it as below."
+title: "Cat Breed Identifier AI: Edge-Native MLOps Pipeline"
+message: "If you use this software, methodology, or dataset architecture in your research, please cite it using the metadata from this file."
+type: software
 authors:
-  - family-names: "Thathsarani"
-    given-names: "Umanda"
-title: "Cat Breed Identifier AI - Edge MLOps Pipeline"
-version: 1.0.0
-date-released: 2026-06-20
-url: "https://github.com/umandathathsarani/cat-identifier-ai"
+  - given-names: "Umanda"
+    family-names: "Thathsarani"
+    affiliation: "Sri Lanka Institute of Information Technology (SLIIT)"
+    # orcid: "https://orcid.org/0000-0000-0000-0000" # Add your ORCID if you have one
 repository-code: "https://github.com/umandathathsarani/cat-identifier-ai"
+url: "https://github.com/umandathathsarani/cat-identifier-ai"
+abstract: >-
+  A production-ready Machine Learning Operations (MLOps) pipeline and a cross-platform React Native mobile application. It trains, optimizes, and deploys a deep learning model capable of identifying 42 cat breeds directly on edge devices (Android/iOS) via TensorFlow Lite and C++ Vision Camera frame processors.
 keywords:
   - machine-learning
   - edge-ai
+  - computer-vision
   - react-native
   - tensorflow-lite
-  - computer-vision
+  - mlops
+  - efficientnet
+license: "Proprietary"
+version: "1.0.0"
+date-released: "2026-06-20"
