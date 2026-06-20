@@ -26,13 +26,8 @@
         "android.permission.CAMERA"
       ]
     },
-    "plugins": [
-      [
-        "expo-router",
-        {
-          "appRoot": "./src/app"
-        }
-      ],
+ "plugins": [
+      "expo-router",
       "react-native-fast-tflite"
     ],
     "experiments": {
