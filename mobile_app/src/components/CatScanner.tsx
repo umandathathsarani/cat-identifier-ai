@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { Camera, useCameraDevice, useCameraPermission, Frame } from 'react-native-vision-camera';
 
-import { Camera, useCameraDevice, useFrameProcessor, useCameraPermission, Frame } from 'react-native-vision-camera';
+// @ts-ignore
+import { useFrameProcessor } from 'react-native-vision-camera';
+
 import { useTensorflowModel } from 'react-native-fast-tflite';
 import { useResizePlugin } from 'vision-camera-resize-plugin';
 
