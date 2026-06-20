@@ -5,7 +5,7 @@ about: Report a crash, performance issue, incorrect prediction, or unexpected be
 title: "bug: "
 labels: ["bug", "needs-triage"]
 assignees: []
--------------
+---
 
 # 🐛 Bug Report
 
