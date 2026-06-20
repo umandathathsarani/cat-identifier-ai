@@ -29,3 +29,6 @@ yarn-error.log
 # 🚨 EXCEPTION: Track the compressed mobile models! 🚨
 !mobile_app/assets/models/
 !mobile_app/assets/models/*
+
+
+*.apk
