@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, Image } from 'react-native';
 import { 
   Camera as VisionCamera, 
   useCameraDevice, 
@@ -55,6 +55,11 @@ export default function CatScanner() {
         frameProcessor={frameProcessor}
         pixelFormat="yuv" // Keep as yuv for Vision Camera v4
       />
+
+      <Image 
+        source={require('../../assets/images/react-logo.png')} 
+        style={styles.logo} 
+      />
       
       <View style={styles.overlay}>
         <Text style={styles.scanText}>Scanning for Cats...</Text>
@@ -66,5 +71,13 @@ export default function CatScanner() {
 const styles = StyleSheet.create({
   centerText: { flex: 1, textAlign: 'center', textAlignVertical: 'center', fontSize: 18 },
   overlay: { position: 'absolute', bottom: 50, alignSelf: 'center', backgroundColor: 'rgba(0,0,0,0.7)', padding: 20, borderRadius: 15 },
-  scanText: { color: 'white', fontSize: 18, fontWeight: 'bold' }
+  scanText: { color: 'white', fontSize: 18, fontWeight: 'bold' },
+  logo: {
+    position: 'absolute',
+    top: 50,
+    alignSelf: 'center',
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+  }
 });

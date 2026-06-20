@@ -7,26 +7,32 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true,
+      "newArchEnabled": false,
       "bundleIdentifier": "com.umandathathsarani.catidentifier",
       "infoPlist": {
         "NSCameraUsageDescription": "Cat Identifier needs access to your camera to scan breeds."
       }
     },
-"android": {
+    "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
+      "newArchEnabled": false,
       "package": "com.umandathathsarani.catidentifier",
       "permissions": [
         "android.permission.CAMERA"
       ]
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "appRoot": "./src/app"
+        }
+      ],
       "react-native-fast-tflite"
     ],
     "experiments": {
