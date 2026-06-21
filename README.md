@@ -9,7 +9,7 @@
 ![Expo](https://img.shields.io/badge/Expo-SDK_56-black)
 ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-success)
 
-> A production-ready Machine Learning Operations (MLOps) pipeline and a cross-platform React Native mobile application that trains, optimizes, and deploys a deep learning model capable of identifying 42 cat breeds directly on Android and iOS devices without requiring cloud connectivity.
+> A production-ready Machine Learning Operations (MLOps) pipeline and a cross-platform React Native mobile application that trains, optimizes, and deploys a deep learning model capable of identifying 42 cat breeds directly on Android devices without requiring cloud connectivity.
 
 ---
 
@@ -20,7 +20,6 @@
 * [System Architecture](#-system-architecture)
 * [Technical Specifications](#-technical-specifications)
 * [Training Strategy](#-training-strategy)
-* [Model & Pipeline Optimization](#-model--pipeline-optimization)
 * [Project Structure](#-project-structure)
 * [Installation](#-installation)
 * [Execution Roadmap](#-execution-roadmap)
@@ -28,30 +27,30 @@
 * [Model Performance](#-model-performance)
 * [Future Improvements](#-future-improvements)
 * [Intellectual Property Notice](#-intellectual-property-notice)
+* [Author](#-author)
 
 ---
 
 # 📌 Project Overview
 
-Cat Breed Identifier AI is a complete end-to-end machine learning ecosystem designed to solve the fine-grained image classification challenge of distinguishing visually similar cat breeds.
+Cat Breed Identifier AI is a complete end-to-end machine learning system designed to solve the fine-grained image classification challenge of distinguishing visually similar cat breeds, paired with a custom-built, full-screen camera application.
 
-The project combines:
-
-* A complete TensorFlow-based MLOps training pipeline
-* Transfer learning with EfficientNetB0
-* TensorFlow Lite optimization
-* A React Native mobile application
-* Real-time camera inference using Vision Camera and Nitro Modules
-
-Unlike traditional AI applications that rely on cloud APIs, all inference is performed directly on the device.
-
-### Key Benefits
+Unlike traditional AI applications that rely on remote API calls, this solution performs all inference locally on the user's device using a compressed TensorFlow Lite model and ultra-fast Nitro Modules, ensuring:
 
 * ⚡ Optimized for real-time inference
-* 🔒 Complete privacy
-* 📶 Offline functionality
-* 📱 Mobile-first deployment
-* 🧠 On-device AI processing
+* 🔒 Complete privacy (No images leave the device)
+* 📶 Offline functionality (No internet required after installation)
+* 📱 Mobile-first deployment optimized for mobile hardware
+
+The project follows industry-standard MLOps practices including:
+
+* Data validation
+* Data preprocessing
+* Transfer learning
+* Hyperparameter tuning
+* Model evaluation
+* Quantization
+* Edge deployment
 
 ---
 
@@ -59,100 +58,89 @@ Unlike traditional AI applications that rely on cloud APIs, all inference is per
 
 ## 🧠 Deep Learning Classification
 
-* Identifies 42 distinct cat breeds
-* Trained on 30,624 images
+* Identifies **42 distinct cat breeds**
+* Trained on **30,624 images**
 * Two-phase transfer learning strategy
 * TensorFlow Lite optimized deployment
-* Offline breed prediction
 
 ---
 
 ## 📱 Live Native Camera Integration
 
-* React Native + Expo Router
+* React Native + Expo Router application
+* Custom full-screen camera interface
 * Vision Camera v4 integration
 * Nitro Modules architecture
 * Direct frame inference pipeline
-* Real-time prediction overlays
+* Live prediction overlays
+* Application branding and scanner UI
 
 ---
 
 ## ⚙️ Production Data Pipeline
 
-* TensorFlow tf.data API
+* TensorFlow `tf.data` pipeline
 * Automatic caching
 * Automatic prefetching
 * Dynamic class weighting
-* GPU-optimized batch processing
+* Efficient batch processing
 
 ---
 
 ## 🔋 Edge AI Optimization
 
-* TensorFlow Lite conversion
-* Integer quantization
+* TensorFlow Lite deployment
+* Quantized model execution
 * Reduced memory consumption
-* Faster mobile inference
-* Lower battery usage
+* Mobile CPU/NPU optimization
+* Offline inference support
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                    ┌─────────────────────┐
-                    │     Raw Dataset     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Data Cleaning     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Preprocessing     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │  tf.data Pipeline   │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   EfficientNetB0    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │    Fine-Tuning      │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ TensorFlow Lite     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ React Native App    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Vision Camera v4    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Nitro Modules       │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Live Predictions    │
-                    └─────────────────────┘
+[ Cloud / Desktop MLOps Pipeline ]
+
+Raw Images
+    │
+    ▼
+Data Cleaning
+    │
+    ▼
+Preprocessing
+    │
+    ▼
+tf.data Pipeline
+    │
+    ▼
+Transfer Learning (EfficientNetB0)
+    │
+    ▼
+Fine-Tuning
+    │
+    ▼
+Model Evaluation
+    │
+    ▼
+TensorFlow Lite Conversion
+    │
+    ▼
+
+[ Mobile Edge Application ]
+
+React Native App
+    │
+    ▼
+Vision Camera v4
+(YUV/RGB Frames)
+    │
+    ▼
+Fast TFLite Execution
+(Nitro Modules)
+    │
+    ▼
+UI Overlay & Predictions
 ```
 
 ---
@@ -161,7 +149,7 @@ Unlike traditional AI applications that rely on cloud APIs, all inference is per
 
 | Component         | Details                    |
 | ----------------- | -------------------------- |
-| Architecture      | EfficientNetB0             |
+| Architecture      | EfficientNetB0 (Base)      |
 | Classes           | 42 Cat Breeds              |
 | Dataset Size      | 30,624 Images              |
 | Training Images   | 24,500                     |
@@ -172,7 +160,7 @@ Unlike traditional AI applications that rely on cloud APIs, all inference is per
 | Camera Framework  | Vision Camera v4           |
 | Native Runtime    | Nitro Modules              |
 | Deployment Format | TensorFlow Lite (.tflite)  |
-| Target Platforms  | Android & iOS              |
+| Platform          | Android                    |
 
 ---
 
@@ -186,28 +174,28 @@ The EfficientNetB0 backbone remains frozen while a custom classification head is
 
 * Frozen EfficientNetB0 layers
 * Dense classification head
-* Dropout: 0.4
-* Epochs: 15
+* Dropout (0.4)
+* 15 epochs
 
-### Goal
+### Objective
 
-Retain ImageNet knowledge while adapting the model for cat breed recognition.
+Preserve ImageNet-trained visual knowledge while adapting the model for cat breed classification.
 
 ---
 
 ## Phase 2 — Deep Fine-Tuning
 
-The upper 50 layers are unfrozen and trained using a lower learning rate.
+The upper layers of EfficientNetB0 are unfrozen and retrained using a lower learning rate.
 
 ### Configuration
 
-* Top 50 layers unfrozen
+* Top layers unfrozen
 * Learning Rate: 1e-5
-* Epochs: 40
+* 40 epochs
 
-### Goal
+### Objective
 
-Learn subtle feline characteristics including:
+Learn subtle feline characteristics such as:
 
 * Ear shape
 * Fur texture
@@ -217,7 +205,7 @@ Learn subtle feline characteristics including:
 
 ---
 
-# ⚡ Model & Pipeline Optimization
+# ⚡ Model Optimization
 
 ## TensorFlow Data Pipeline
 
@@ -234,30 +222,21 @@ Benefits:
 
 ---
 
-## Dataset Imbalance Handling
+## Dynamic Class Weighting
 
-* Dynamic class weighting
-* Minority breed protection
-* Reduced prediction bias
+Handles dataset imbalance by assigning higher penalties to underrepresented breeds during training.
 
 ---
 
 ## Early Stopping
 
-```python
-EarlyStopping(
-    monitor="val_accuracy",
-    patience=6
-)
-```
-
-Prevents overfitting and unnecessary training cycles.
+Automatically halts training when validation performance stops improving to reduce overfitting.
 
 ---
 
 ## Model Checkpointing
 
-Automatically saves the best-performing model during training.
+Continuously saves the best-performing model during training.
 
 ---
 
@@ -273,8 +252,8 @@ Benefits:
 
 * Smaller model size
 * Faster inference
-* Lower memory consumption
-* Reduced battery usage
+* Lower memory usage
+* Better battery efficiency
 
 ---
 
@@ -306,14 +285,13 @@ Cat-Breed-Identifier-AI/
 │   └── verify_tflite.py
 │
 ├── mobile_app/
-│   ├── assets/models/
+│   ├── assets/
 │   ├── app/
 │   ├── src/components/
 │   ├── app.json
 │   ├── eas.json
 │   └── package.json
 │
-├── requirements.txt
 ├── CONTRIBUTING.md
 ├── SECURITY.md
 ├── CHANGELOG.md
@@ -418,7 +396,7 @@ cd mobile_app
 eas build --profile preview --platform android
 ```
 
-Install via EAS QR Code or GitHub Releases.
+Install the generated APK from GitHub Releases.
 
 ---
 
@@ -443,7 +421,7 @@ Install via EAS QR Code or GitHub Releases.
 * Fast TFLite
 * Nitro Modules
 
-## DevOps & Tooling
+## Tooling
 
 * Git
 * GitHub
@@ -454,7 +432,7 @@ Install via EAS QR Code or GitHub Releases.
 
 # 📈 Model Performance
 
-> Final metrics will be published after completion of the validation and optimization phase.
+> Final evaluation metrics will be published after completion of the training and validation phase.
 
 | Metric                 | Value |
 | ---------------------- | ----- |
@@ -474,10 +452,10 @@ Install via EAS QR Code or GitHub Releases.
 * Multi-cat detection
 * Breed confidence visualization
 * Breed information cards
-* Automated model updates
-* iOS App Store release
+* Automatic model updates
 * Google Play Store release
-* CI/CD automation
+* iOS support
+* CI/CD automation improvements
 
 ---
 
